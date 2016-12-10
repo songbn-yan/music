@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width"/>
+		
+		<!-- Add to homescreen for Safari on Ios -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="todo">
+		<link rel="apple-touch-icon" href="logo.jpg">
+		
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="todo">
+		<meta name="theme-color" content="#2F3BA2">
+		<link rel="icon" sizes="192x192" href="logo.jpg">
+		
+		<title>音乐APP</title>
+		<link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" href="css/app1.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/app1.js"></script>
+	</head>
+	<body>
+			<audio id="audio" src="mp3/李荣浩-老街 (Live).mp3"  controls loop></audio>
+			
+			<!--头部-->
+		<div id="header">
+			<img src="img/t.png" alt="" />
+			<ul id="left">
+				<li class="xy"><</li>
+			</ul>
+			<ul id="name">老街-李荣浩</ul>
+			
+			<ul id="right">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<!--中间-->
+ 		<div id="box">
+			<div class="circle">
+				<!--<img src="img/2.jpg" alt="">-->
+				<!--<img src="img/4.jpg" alt="" />-->
+				<img src="img/6.jpg" alt="" />
+			</div>
+			
+		</div>
+		
+		
+		<!--开始时间-->
+		<div id="current-time">0:00</div>
+		<!--结束时间-->
+		<div id="duration">3:00</div>
+		<!--音乐进度条-->
+		<div id="progress">
+			<a href="javascript:;" id="p-i"></a>
+		</div>
+		
+		<!--上一首-->
+		<div id="last">
+			<a href="javascript:;" class="iconfont" id="s">&#xe60b;</a>
+		</div>
+		
+		<!--播放-->
+		<div id="play">
+			<a href="javascript:;" class="iconfont" id="bf">&#xe609;</a>
+		</div>
+		
+		<!--下一首-->
+		<div id="next">
+			<a href="javascript:;" class="iconfont" id="x">&#xe60a;</a>
+		</div>
+		
+		<!--音量条-->
+		<div id="volume">
+			<a href="javascript:;" id="v-i"></a>
+		</div>
+		
+		<!--静音-->
+		<div id ="mute" class="iconfont">&#xe61e;</div>
+		
+		<!--删除，收藏，下载-->
+		<div id="footer">
+			<a href="" id="refresh" class="iconfont">&#xe607;</a>
+			<a href=""id="Collection" class="iconfont">&#xe639;</a>
+			<a href="" id="download" class="iconfont">&#xe60d;</a>
+		</div>
+		
+		<!--音乐列表-->
+		<div id="music-list">
+			<ul class="uls-header">
+				<li class="whole">
+					<a href="javascript:;">全部</a>
+				</li>
+				<li class="list">
+					<a href="javascript:;">所有列表</a>
+				</li>
+				<li class="empty">
+					<a href="javascript:;">清空</a>
+				</li>
+			</ul>
+			<ul id="uls">
+				<!--<li class="active">
+					<span class="names">老街-李荣浩 </span>
+					<a class="delete" href="javascript:;">删除</a>		
+				</li>-->
+			</ul>
+			
+		</div>
+			
+			
+			
+	</body>
+</html>

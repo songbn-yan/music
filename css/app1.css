@@ -1,0 +1,323 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: 0; }
+
+html {
+  font-size: 100px; }
+
+body {
+  font-size: 16px;
+  background: url(../img/1.jpg) repeat-y;
+  background-size: cover; }
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 42.66667px; } }
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px; } }
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px; } }
+@media screen and (min-width: 412px) {
+  html {
+    font-size: 54.93333px; } }
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 55.2px; } }
+#audio {
+  display: none; }
+
+#header {
+  width: 100%;
+  height: 2rem;
+  background: #4a345b;
+  position: relative; }
+  #header img {
+    width: 100%;
+    height: 44px; }
+  #header #left {
+    width: 1rem;
+    height: 0.7rem;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 0.2rem;
+    top: 1.1rem;
+    border-radius: 0.1rem; }
+    #header #left .xy {
+      font-size: 0.4rem;
+      color: #fff;
+      text-align: center;
+      line-height: 0.7rem;
+      font-weight: bold; }
+  #header #name {
+    color: #eee;
+    font-size: 0.3rem;
+    margin-left: 40%;
+    margin-top: 0.35rem; }
+  #header #right {
+    width: 1rem;
+    height: 0.7rem;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 0.2rem;
+    top: 1.1rem;
+    border-radius: 0.1rem; }
+    #header #right li {
+      width: 0.1rem;
+      height: 0.1rem;
+      border-radius: 50%;
+      background: #fff;
+      float: left;
+      margin-left: 0.15rem;
+      margin-top: 0.3rem; }
+
+#box {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin-top: 35px;
+  margin-left: 62.5px; }
+  #box .circle {
+    width: 100%;
+    height: 100%;
+    border: 10px solid #272a57;
+    box-sizing: border-box;
+    border-bottom-color: #442b55;
+    border-right-color: #442b55;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition-duration: 1s; }
+    #box .circle img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      border-radius: 50%; }
+
+#box:hover .circle {
+  transform: rotate(360deg); }
+
+#current-time {
+  color: #fff;
+  font-weight: bold;
+  float: left;
+  margin-left: 0.2rem;
+  margin-top: 60px; }
+
+#duration {
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  margin-right: 0.2rem;
+  margin-top: 60px; }
+
+#progress {
+  width: 80%;
+  height: 2px;
+  background: #bbb;
+  margin-top: 85px;
+  position: relative;
+  margin-left:10%; }
+  #progress #p-i {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    margin-top: -4px;
+    left: -5px; }
+
+#last {
+  display: block;
+  width: 1rem;
+  height: 1rem; }
+  #last a {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    margin-top: 0.6rem;
+    float: left;
+    margin-left: 1.8rem; }
+
+#play {
+  display: block;
+  width: 1rem;
+  height: 1rem; }
+  #play a {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    margin-top: -0.7rem;
+    float: left;
+    margin-left: 3.2rem; }
+
+#next {
+  display: block;
+  width: 1rem;
+  height: 1rem; }
+  #next a {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    margin-top: -1.4rem;
+    float: left;
+    margin-left: 4.6rem; }
+
+#volume {
+  width: 70%;
+  height: 2px;
+  background: #bbb;
+  margin-top: -60px;
+  position: relative;
+  margin-left:10%; }
+  #volume #v-i {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    margin-top: -4px;
+    right: -5px; }
+
+#mute {
+  float: right;
+  margin-right: 0.5rem;
+  font-size: 0.35rem;
+  display: block;
+  text-align: center;
+  line-height: 10px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  margin-top: -5px; }
+
+#footer {
+  width: 100%;
+  height: 1rem;
+  margin-top: 40px; }
+  #footer a {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    margin-left: 17%; }
+
+#music-list {
+  width: 100%;
+  background: black;
+  opacity: 0.6;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  overflow: hidden;
+  display: none; }
+  #music-list .uls-header {
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px solid #6D46B3;
+    float: left; }
+    #music-list .uls-header .whole, #music-list .uls-header .list, #music-list .uls-header .empty {
+      float: left;
+      height: 100%; }
+    #music-list .uls-header .whole {
+      position: relative;
+      width: 18%; }
+      #music-list .uls-header .whole a {
+        display: block;
+        width: auto;
+        height: auto;
+        font-size: 0.3rem;
+        color: #ccc;
+        text-align: center;
+        line-height: 1rem; }
+    #music-list .uls-header .list {
+      position: relative;
+      width: 58%; }
+      #music-list .uls-header .list a {
+        display: block;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        text-align: center;
+        line-height: 1rem;
+        font-size: 0.35rem;
+        color: #C8C1CD; }
+    #music-list .uls-header .empty {
+      position: relative;
+      width: 22%; }
+      #music-list .uls-header .empty a {
+        display: block;
+        width: auto;
+        height: auto;
+        font-size: 0.3rem;
+        color: #ccc;
+        padding-right: 15%;
+        text-align: right;
+        line-height: 1rem; }
+  #music-list #uls {
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 0.1rem;
+    background: #fff; }
+    #music-list #uls li {
+      width: 100%;
+      height: 1rem;
+      display: block;
+      padding-left: 0.25rem;
+      float: left;
+      border-bottom: 1px solid #6D46B3;
+      position: relative; }
+      #music-list #uls li .names {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: 0 auto;
+        width: 80%;
+        left: 5%;
+        line-height: 1rem;
+        font-size: 0.3rem;
+        color: #000000; }
+      #music-list #uls li .delete {
+        text-align: right;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 5%;
+        text-align: center;
+        line-height: 1rem;
+        font-size: 0.3rem;
+        width: auto;
+        height: auto;
+        color: #cfcfcf; }
+    #music-list #uls .active span {
+      color: #0086B3; }
+
+#music-list.list {
+  animation: height 1s linear both; }
+
+/*# sourceMappingURL=app1.css.map */

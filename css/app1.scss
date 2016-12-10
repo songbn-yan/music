@@ -1,0 +1,384 @@
+$device-width:320px,360px,375px,412px,414px;
+$width:750px;
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border:0;
+}
+
+html{
+    font-size: 100px;
+}
+body{
+    font-size: 16px;
+    background: url(../img/1.jpg)repeat-y;
+//  background-repeat: repeat;
+    background-size: cover;
+//  overflow:hidden;
+}
+@each $w in $device-width{
+    @media screen and (min-width:#{$w}){
+        html{
+            font-size:100px * $w / $width;
+        }
+    }
+}
+//audio
+#audio{
+    display: none;
+}
+
+//header
+#header{
+    width:100%;
+    height:2rem;
+    background:#4a345b;
+    position:relative;
+    img{
+        width:100%;
+        height:44px;
+    }
+    #left{
+        width:1rem;
+        height:0.7rem;
+        border:1px solid #fff;
+        position:absolute;
+        left:0.2rem;
+        top:1.1rem;
+        border-radius:0.1rem;  
+        .xy{
+            font-size:0.4rem;
+            color: #fff;
+            text-align: center;
+            line-height: 0.7rem;
+            font-weight: bold;
+        }
+    }
+    #name{
+         color:#C8C1CD;
+         font-size:0.3rem;
+         margin-left:40%;
+         margin-top:0.35rem;
+    }
+   
+    #right{
+        width:1rem;
+        height:0.7rem;
+        border:1px solid #fff;
+        position:absolute;
+        right:0.2rem;
+        top:1.1rem;
+        border-radius: 0.1rem;
+        li{
+            width:0.1rem;
+            height:0.1rem;
+            border-radius:50%;
+            background:#fff;
+            float:left;
+            margin-left:0.15rem ;
+            margin-top:0.3rem ;
+        }
+    }
+}
+
+//zhongjian
+
+#box{
+    width:250px;
+    height:250px;
+    position: relative;
+    margin-top:35px;
+    margin-left:62.5px;
+    .circle{
+        width:100%;
+        height:100%;
+        border:10px solid #272a57;
+        box-sizing:border-box;
+        border-bottom-color:#442b55;
+        border-right-color:#442b55; 
+        border-radius: 50%;
+        position:absolute;
+        left:0;
+        top:0;
+        z-index: 1;
+        transition-duration: 1s;
+        img{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:0;
+            border-radius: 50%;
+        }
+    
+    }
+}
+    #box:hover .circle{
+    transform: rotate(360deg);
+}
+
+
+
+//kai shi shi jian
+#current-time{
+  color:#fff; 
+  font-weight:bold; 
+  float:left; 
+  margin-left:0.2rem;
+  margin-top:60px;
+  
+}
+//jie shu shi jian
+#duration{
+   color:#fff;
+   font-weight:bold;
+   float:right; 
+   margin-right:0.2rem; 
+   margin-top:60px; 
+}
+//jin du tiao
+#progress{
+    width:100%;
+    height:2px;
+    background:#6d46b3;
+    margin-top:85px;
+    position:relative;
+    #p-i{
+        position:absolute;
+        width:10px;
+        height:10px;
+        border-radius:50%;
+        background:#fff;
+        margin-top:-4px;
+        left:-5px;
+    }
+}
+
+//last
+#last{
+    display: block;
+    width:1rem;
+    height:1rem;
+    a{
+       font-size: 1rem;
+       display: block;
+       text-align: center;
+       line-height: 30px;
+//     width: 30px;
+//     height: 30px;
+       color: #fff;
+       margin-top:0.6rem;
+       float: left;
+       margin-left:1.8rem;
+    }
+}
+
+//bofang
+#play{
+    display:block;
+    width:1rem;
+    height:1rem;
+    a{
+       font-size: 1rem;
+       display: block;
+       text-align: center;
+       line-height: 30px;
+//     width: 30px;
+//     height: 30px;
+       color: #fff;
+       margin-top:-0.7rem;
+       float: left;
+       margin-left:3.1rem;
+    }
+}
+//next
+#next{
+    display:block;
+    width:1rem;
+    height:1rem;
+    a{
+      font-size: 1rem;
+       display: block;
+       text-align: center;
+       line-height: 30px;
+//     width: 30px;
+//     height: 30px;
+       color: #fff;
+       margin-top:-1.4rem;
+       float: left;
+       margin-left:4.4rem;  
+    }
+}
+
+//yin liang tiao
+#volume{
+    width:85%;
+    height:2px;
+    background:#6d46b3;
+    margin-top:-60px;
+    position:relative;
+    #v-i{
+        position:absolute;
+        width:10px;
+        height:10px;
+        border-radius:50%;
+        background:#fff;
+        margin-top:-4px;
+        right:-5px;
+    }
+}
+
+
+//jing yin
+#mute{
+    float: right;
+    margin-right:0.5rem ;
+    font-size: 0.5rem;
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    margin-top:-5px;
+}
+//footer
+#footer{
+    width:100%;
+    height:1rem;
+    margin-top:40px;
+    a{
+       width:20px;
+       height:20px;
+       color:#fff;
+       font-size:0.7rem;
+       line-height:1rem;
+       margin-left:17% ;
+    }
+    
+}
+
+//music-list
+#music-list{
+    width:100%;
+    background: black;
+    opacity: 0.6;
+    position:fixed;
+    bottom:0;
+    left:0;
+    z-index: 30;
+    overflow:hidden;
+    display: none;
+    .uls-header{
+        width:100%;
+        height:1rem;
+        border-bottom: 1px solid #6D46B3;
+        float:left;
+        .whole,.list,.empty{
+            float: left;
+            height: 100%;
+        }
+        .whole{
+            position: relative;
+            width: 18%;
+            a{
+                display: block;
+                width: auto;
+                height: auto;
+                font-size: 0.3rem;
+                color: #ccc;
+                text-align: center;
+                line-height: 1rem;
+            }
+        }
+        .list{
+            position: relative;
+            width: 58%;
+            a{
+                display: block;
+                width: auto;
+                height: auto;
+                overflow: hidden;
+                text-align: center;
+                line-height: 1rem;
+                font-size: 0.35rem;
+                color: #C8C1CD;
+            }
+        }
+        .empty{
+            position: relative;
+            width: 22%;
+            a{
+                display: block;
+                width: auto;
+                height: auto;
+                font-size: 0.3rem;
+                color: #ccc;
+                padding-right: 15%;
+                text-align: right;
+                line-height: 1rem;
+            }
+        }
+    }
+        
+    #uls{
+        float: left;
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 0.1rem;
+        background: #fff;
+        li{
+            width:100%; 
+            height: 1rem;
+            display: block;
+            padding-left: 0.25rem;
+            float: left; 
+            border-bottom: 1px solid #6D46B3;
+            position: relative;
+            .names{
+                position:absolute;
+                top:0;
+                bottom:0;
+                margin: 0 auto;
+                width: 80%;
+                left: 5%;
+                line-height:1rem;
+                font-size: 0.3rem;
+                color: #000000;
+            }
+            .delete{
+                text-align: right;
+                position:absolute;
+                top:0;
+                bottom:0;
+                right: 5%;
+                text-align: center;
+                line-height: 1rem;
+                font-size: 0.3rem;
+                width: auto;
+                height: auto;
+                color: #cfcfcf;
+            }
+        }
+         .active span{
+            color: #0086B3;
+        }
+    }
+
+}
+#music-list.list{
+     animation: height 1s linear both;
+}
+
+
+
